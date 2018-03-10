@@ -23,13 +23,14 @@ function updateSpread() {
 function drawEllipse() {
   fill("#ff0000");
   noStroke();
-  ellipse(mouseX, mouseY, 100, 100);
+  ellipse(mouseX, mouseY, 100, 100)
 }
 
 function drawSplatter() {
   fill("#ff0000");
   var randomNum = random(10,15);
   for(var i = 0; i < randomNum; i++) {
+    var randomSize = random(5, 15);
     var x = random(mouseX - spread, mouseX + spread);
     var y = random(mouseY - spread, mouseY + spread);
     ellipse(x, y, randomSize, randomSize);
